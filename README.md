@@ -1,5 +1,5 @@
 # hello-consul
-Service Discovery using consul.io
+Service Discovery using consul.io & node.js
 
 
 
