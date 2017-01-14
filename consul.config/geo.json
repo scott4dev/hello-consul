@@ -1,0 +1,7 @@
+{
+	"service": {
+		"name": "geo",
+		"tags": ["demo"],
+		"port": 8081
+	}
+}

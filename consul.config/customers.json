@@ -1,0 +1,7 @@
+{
+	"service": {
+		"name": "customers",
+		"tags": ["demo"],
+		"port": 8082
+	}
+}
