@@ -9,7 +9,7 @@ The folder [consul.config] (./consul.config) contains some json files to describ
 ## consul service
 This service acts as service discovery
 
-To run the consul service run the command
+To run the consul service use the command
 ```
 npm run start:consul
 ```
@@ -17,7 +17,7 @@ npm run start:consul
 ## geo service
 This service acts as dummy data service
 
-To run the geo service run the command
+To run the geo service use the command
 ```
 npm run start:geo
 ```
@@ -26,7 +26,7 @@ This service is known by consul because is described in this [file] (./consul.co
 ## customer service
 This service acts as dummy data service
 
-To run the customer service run the command
+To run the customer service use the command
 ```
 npm run start:geo
 ```
@@ -35,7 +35,7 @@ This service is known by consul because is described in this [file] (./consul.co
 ## consumer service
 This service queries the consul to get the list of the available data services and the queries them
 
-To run the service that uses the geo and customer run the command
+To run the service that uses the geo and customer use the command
 ```
-npm run start
+npm start
 ```
