@@ -33,7 +33,7 @@ npm run start:geo
 This service is known by consul because is described in this [file] (./consul.config/customers.json)
 
 ## consumer service
-This service queries the consul to get the list of the available data services and the queries them
+This service queries the consul service and the data services
 
 To run the service that uses the geo and customer use the command
 ```
