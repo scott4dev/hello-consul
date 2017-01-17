@@ -14,6 +14,8 @@ To run this service use the command
 npm run start:consul
 ```
 The consul web console is available at [localhost:8500/ui] (http://localhost:8500/ui)
+
+
 ![alt ur](https://github.com/scott4dev/hello-consul/blob/master/public/ui.png "Consul web console")
 
 ## geo service
