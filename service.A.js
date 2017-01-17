@@ -1,12 +1,22 @@
 // content of index.js
-const http = require('http')
+const http = require('http');
 const port = 8083;
-const name = 'service.A';
+const name = 'auto';
 var consul = require('consul')();
 
 const requestHandler = (request, response) => {
 	console.log(request.url)
-	response.end('Hello Node.js Server!')
+
+	if (request.url.indexOf('exit') != -1) {
+		response.end('Shutting down');
+		consul.agent.service.deregister(name, function (err) {
+			if (err) throw err;
+			process.exit();
+		});
+	}
+	else {
+		response.end('Hello Node.js Server!')
+	}
 }
 
 const server = http.createServer(requestHandler);
@@ -19,8 +29,10 @@ server.listen(port, (err) => {
 	console.log(`server is listening on ${port}`);
 
 	const data = {
-		name : name,
-		port: port
+		id: name,
+		name: name,
+		port: port,
+		tags: ['demo']
 	};
 
 	consul.agent.service.register(data, function (err) {
