@@ -13,6 +13,7 @@ To run this service use the command
 ```
 npm run start:consul
 ```
+The consul web console is available at [localhost:8500/ui] (http://localhost:8500/ui)
 
 ## geo service
 This service acts as dummy data service
@@ -33,13 +34,19 @@ npm run start:geo
 This service is known by consul because is described in this [file] (./consul.config/customers.json)
 
 ## auto service
-This service is a dummy HTTP service that auto register him self on consul
+This service is a dummy HTTP service that auto register himself to the service discovery
 
 To run this service use the command
 ```
 npm start:auto
 ```
+While the service is running you can see that consul calls the endpoint /ping to do application-level health checks
 
+To stop this service use the command
+```
+curl http://localhost:8083/exit
+```
+If you use CTRL+C stop this service you are not deregistering it from the service discovery
 
 ## consumer service
 This service queries the consul service and the data services
