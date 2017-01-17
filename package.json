@@ -8,7 +8,7 @@
     "start:geo": "http-server public/geo -p 8081",
     "start:auto": "node service.auto.js",
     "start:customers": "http-server public/customers -p 8082",
-    "start:consul": "consul agent -dev -advertise 127.0.0.1 -config-dir=consul.config"
+    "start:consul": "consul agent -dev -advertise 127.0.0.1 -config-dir=consul.config -ui-dir public/web.ui"
   },
   "keywords": [
     "consul.io",

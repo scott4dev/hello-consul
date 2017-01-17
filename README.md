@@ -32,16 +32,16 @@ npm run start:geo
 ```
 This service is known by consul because is described in this [file] (./consul.config/customers.json)
 
-## consumer service
-This service queries the consul service and the data services
+## auto service
+This service is a dummy HTTP service that auto register him self on consul
 
 To run this service use the command
 ```
-npm start
+npm start:auto
 ```
 
 
-## auto service
+## consumer service
 This service queries the consul service and the data services
 
 To run this service use the command
