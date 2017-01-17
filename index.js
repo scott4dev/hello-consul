@@ -25,6 +25,8 @@ var makeServiceCall = function (host, port) {
 }
 
 consul.catalog.service.list(function (err, result) {
+	console.log('### services:', result)
+
 	Object.keys(result).map(function (service) {
 		if (service != 'consul') {
 			consul.catalog.service.nodes(service, function (err, result) {
