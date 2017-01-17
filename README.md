@@ -39,3 +39,12 @@ To run this service use the command
 ```
 npm start
 ```
+
+
+## auto service
+This service queries the consul service and the data services
+
+To run this service use the command
+```
+npm start
+```
