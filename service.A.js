@@ -32,7 +32,11 @@ server.listen(port, (err) => {
 		id: name,
 		name: name,
 		port: port,
-		tags: ['demo']
+		tags: ['demo'],
+		check: {
+			http: 'http://localhost:8083/ping',
+			interval: '5s',
+		}
 	};
 
 	consul.agent.service.register(data, function (err) {
