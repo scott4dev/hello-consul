@@ -1,7 +1,13 @@
 {
 	"service": {
 		"name": "customers",
-		"tags": ["demo"],
-		"port": 8082
+		"tags": [
+			"demo"
+		],
+		"port": 8082,
+		"check": {
+			"http": "http://localhost:8082/index.json",
+			"interval": "5s"
+		}
 	}
 }

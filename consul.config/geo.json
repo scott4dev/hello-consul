@@ -1,7 +1,13 @@
 {
 	"service": {
 		"name": "geo",
-		"tags": ["demo"],
-		"port": 8081
+		"tags": [
+			"demo"
+		],
+		"port": 8081,
+		"check": {
+			"http": "http://localhost:8081/index.json",
+			"interval": "5s"
+		}
 	}
 }
